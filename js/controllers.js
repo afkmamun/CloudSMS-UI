@@ -974,10 +974,29 @@ function ($scope, $stateParams) {
 	function ($scope, $stateParams,ApiService) {
 
 	$scope.nameid=[{}];
+	$scope.input={};
 
-	$scope.changedNameIdValue=function (nameid)
+	$scope.changedNameIdValue=function (item)
 	{
+		console.log(item);
+		try
+		{
+			$scope.input.rate_chart=item.rate_chart;
+			//id=naid.id;
+			//$scope.input.balance=naid.balance;
+			//$scope.currentBalance=naid.balance;
+			//$scope.input.tp=naid.tp;
 
+		}
+		catch(err)
+		{
+			$scope.input.rate_chart="";
+			//id=0;
+			//$scope.balance=0;
+			//$scope.input.balance=0;
+			//$scope.input.tp="";
+
+		}
 	}
 
 	$scope.changedTypeValue=function(type)
@@ -992,7 +1011,7 @@ function ($scope, $stateParams) {
 			var req = 
 			{
 				method: 'GET',
-				url: "http://www.arifur.me/sms/modules/customers/getbranchrateid/customer"
+				url: "http://localhost/sms/modules/common/getbranchrateid/customer"
 				
 			}	
 			ApiService.callApi(req).then(function(response){
@@ -1001,6 +1020,7 @@ function ($scope, $stateParams) {
 				console.log(data);
 				if(!data.error)
 				{
+					$scope.nameid=data;
 					//$state.go('menu.home'); 
 				}
 				}).catch(function(response){
@@ -1014,7 +1034,7 @@ function ($scope, $stateParams) {
 			var req = 
 			{
 				method: 'GET',
-				url: "http://www.arifur.me/sms/modules/customers/getbranchrateid/vendor"
+				url: "http://localhost/sms/modules/common/getbranchrateid/vendor"
 				
 			}	
 			ApiService.callApi(req).then(function(response){
@@ -1023,6 +1043,7 @@ function ($scope, $stateParams) {
 				console.log(data);
 				if(!data.error)
 				{
+					$scope.nameid=data;
 					//$state.go('menu.home'); 
 				}
 				}).catch(function(response){
@@ -1071,7 +1092,7 @@ function ($scope, $stateParams) {
 
 
 
-	$scope.naid={};
+	//$scope.naid={};
 	$scope.fields = [{id: 'field1'}];
 
 	$scope.addNewField=function()
@@ -1085,10 +1106,7 @@ function ($scope, $stateParams) {
     	$scope.fields.splice(lastItem);
   	};
 
-  	$scope.changedNameIdValue=function(naid)
-  	{
-
-  	}
+  	
 
 
 }])

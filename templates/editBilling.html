@@ -10,7 +10,8 @@
       </label>
       <label class="item item-select" id="editBilling-select" name="id">
         <span class="input-label">Name (ID)</span>
-        <select  ng-model="naid" ng-change="changedNameIdValue(naid)" ng-options="item.name for item in nameid" >
+        <select  ng-model="item" ng-change="changedNameIdValue(item)" 
+        ng-options="item.id for item in nameid" >
 
          <!--  <option data-ng-repeat="nd in nameid" >
             {{nd.id}}. {{nd.name}}
@@ -19,7 +20,7 @@
       </label>
       <label class="item item-input" id="editBilling-input9" name="ratechart">
         <span class="input-label">Rate Chart</span>
-        <input type="text" placeholder="">
+        <input ng-model="input.rate_chart" type="text" placeholder="">
       </label>
       <button id="editBilling-button" ng-click="addNewField()" class="button button-positive button-block icon-left ion-android-add-circle">Add Prefix and Rate</button>
       <div class="spacer" style="width: 300px; height: 15px;"></div>
