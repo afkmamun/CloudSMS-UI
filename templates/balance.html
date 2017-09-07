@@ -1,0 +1,30 @@
+<ion-view title="Add Balance" id="page14">
+  <ion-content padding="true" class="has-header" overflow-scroll="true">
+    <form id="balance-form15" class="list">
+      <label class="item item-select" id="balance-select6" name="type">
+        <span class="input-label">Type</span>
+        <select ng-model="type" ng-change="changedTypeValue(type)">
+          <option>Customer</option>
+          <option>Vendor</option>
+        </select>
+      </label>
+      <label class="item item-select" id="balance-select7">
+        <span class="input-label">Name (id)</span>
+        <select  ng-model="item" ng-model="item" ng-change="changedNameIdValue(item)" ng-options="item.name for item in naid" >
+        </select>
+      </label>
+       <label class="item text-center" id="current-balance" style="background: #488aff; color: #ffffff; ">
+        <span>Current Balance: {{currentBalance}}</span>
+      </label>
+      <label class="item item-input" id="balance-input14">
+        <span class="input-label">Add Balance (+)</span>
+        <input ng-model="input.balance" type="number" placeholder="">
+      </label>
+       <!--<label class="item item-input" id="tp-input14">
+        <span class="input-label">TP</span>
+        <input ng-model="input.tp" type="number" placeholder="">
+      </label>-->
+    </form>
+    <button ng-click="save(input)" id="balance-button31" class="button button-stable button-block">Save</button>
+  </ion-content>
+</ion-view>

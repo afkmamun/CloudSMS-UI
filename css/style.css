@@ -1,0 +1,91 @@
+/* Empty. Add your own CSS if you like */
+body {
+    cursor: url('http://ionicframework.com/img/finger.png'), auto;
+}
+
+/*.header .col {
+    background-color:lightgrey;
+}
+
+.col {
+    border: solid 1px grey;
+    border-bottom-style: none;
+    border-right-style: none;
+}
+
+.col:last-child {
+    border-right: solid 1px grey;
+}
+
+.row:last-child .col {
+    border-bottom: solid 1px grey;
+}*/
+/*<Table>*/
+.header .col {
+	word-wrap: break-word;
+    background-color:#21336a;
+	font-weight: bold;
+	font-size:small;
+	/*border: dotted 1px white;*/
+	
+	
+}
+
+.col {
+	
+	 word-break: break-all;
+   
+   /* border: solid 1px white;*/
+    /*border-bottom-style: none;*/
+    /*border-right-style: none;*/
+	
+	font-weight: bold;
+	font-size:small;
+	font-family: Arial, Helvetica, sans-serif
+	
+   
+	
+	
+}
+.scroll
+{	
+	height: 100%;
+}
+.col:last-child {
+	
+	
+   /* border-right: solid 1px grey;*/
+}
+
+/*.row:last-child .col {
+    border-bottom: solid 1px grey;
+}*/
+.row {
+	 
+}
+.row:nth-child(odd) {   
+	
+     border-radius: 0px;
+    background-color: #99a9df;
+	color: white;
+	
+}
+
+.row:nth-child(even) {
+	
+	 border-radius: 0px;
+	  
+    background-color: white;
+}
+.row:first-child {
+	
+	border-radius: 0px;
+   /* background-color: #00336;*/
+    background-color: #21336a;
+	
+	
+	
+	
+}
+
+/*</Table>*/

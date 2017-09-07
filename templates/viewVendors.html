@@ -1,0 +1,20 @@
+<ion-view title="Vendor List" id="page17">
+  <ion-content padding="true" class="has-header" overflow-scroll="true">
+
+    <div class="row header text-center">
+      <div class="col">Name</div>
+      <div class="col">Balance</div>
+      <div class="col">TP</div>
+      <div class="col">Billing ID</div>
+     <!-- <div class="col"></div>-->
+    </div>
+    <div class="row text-center" ng-repeat="data in ctrl.data">
+      <div class="col">{{data.name}}</div>
+      <div class="col">{{data.balance}}</div>
+      <div class="col">{{data.tp}}</div>
+      <div class="col">{{data.billingid}}</div>
+      <!--<div class="col"><button ion-button round ng-click="ctrl.add($index)">Add</button></div>-->
+    </div>
+
+  </ion-content>
+</ion-view>

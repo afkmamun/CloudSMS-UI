@@ -1,0 +1,24 @@
+<ion-view title="Customer List" id="page17">
+  <ion-content padding="true" class="has-header" overflow-scroll="true">
+
+    <div class="row header text-center">
+      <div class="col"><h6 class="stable">Name</h6></div>
+      <div class="col"><h6 class="stable">Phone</h6></div>
+      <div class="col"><h6 class="stable">Email</h6></div>
+      <div class="col"><h6 class="stable">Balance</h6></div>
+      <div class="col"><h6 class="stable">TP</h6></div>
+      <div class="col"><h6 class="stable">Route ID</h6></div>
+     <!-- <div class="col"></div>-->
+    </div>
+    <div class="row text-center" ng-repeat="data in ctrl.data">
+      <div class="col">{{data.name}}</div>
+      <div class="col">{{data.phone}}</div>
+      <div class="col">{{data.email}}</div>
+      <div class="col">{{data.balance}}</div>
+      <div class="col">{{data.tp}}</div>
+      <div class="col">{{data.routingid}}</div>
+      <!--<div class="col"><button ion-button round ng-click="ctrl.add($index)">Add</button></div>-->
+    </div>
+
+  </ion-content>
+</ion-view>

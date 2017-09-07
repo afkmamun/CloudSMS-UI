@@ -1,0 +1,45 @@
+<ion-view title="Add Billing" id="page11">
+  <ion-content padding="true" class="has-header" overflow-scroll="true">
+    <form id="addBilling-form10" class="list">
+      <label class="item item-select" id="addBilling-select5" name="type">
+        <span class="input-label">Type</span>
+        <select  ng-model="type" ng-change="changedTypeValue(type)" >
+          <option>Customer</option>
+          <option>Vendor</option>
+        </select>
+      </label>
+      <label class="item item-select" id="addBilling-select8" name="id">
+        <span class="input-label">Name (ID)</span>
+        <select  ng-model="naid" ng-change="changedNameIdValue(naid)" ng-options="item.name for item in nameid" >
+
+         <!--  <option data-ng-repeat="nd in nameid" >
+            {{nd.id}}. {{nd.name}}
+          </option> -->
+        </select>
+      </label>
+      <label class="item item-input" id="addBilling-input9" name="ratechart">
+        <span class="input-label">Rate Chart</span>
+        <input ng-model="rate_chart" type="text" placeholder="Rate Chart">
+      </label>
+      <button id="addBilling-button29" ng-click="addNewField()" class="button button-positive button-block icon-left ion-android-add-circle">Add Prefix and Rate</button>
+      <div class="spacer" style="width: 300px; height: 15px;"></div>
+
+      <fieldset  data-ng-repeat="field in fields">
+          <label class="item item-input" id="addBilling-input11" name="prefix">
+            <span class="input-label">{{$index+1}}. Prefix</span>
+            <input ng-model="field.prefix" type="text" placeholder="">
+          </label>
+          <label class="item item-input" id="addBilling-input13" name="rate">
+            <span class="input-label">{{$index+1}}. Rate</span>
+            <input ng-model="field.rate" type="text" placeholder="">
+          
+
+          </label>
+           <button class="button button-positive button-block icon-left ion-android-remove-circle"
+            ng-show="$last" ng-click="removeField()">Remove Field</button>
+      </fieldset>
+
+    </form>
+    <a ng-click="submit(rate_chart)" id="addBilling-button24"  class="button button-stable button-block">Submit</a>
+  </ion-content>
+</ion-view>

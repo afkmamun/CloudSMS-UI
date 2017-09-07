@@ -1,0 +1,24 @@
+<ion-view title="Edit Vendor" id="page16">
+  <ion-content padding="true" class="has-header">
+    <form id="editVendor-form14" class="list">
+    <label class="item item-select" id="editCustomer-select8" name="id">
+        <span class="input-label">Vendor Name</span>
+        <select  ng-model="item" ng-change="changedNameIdValue(item)" ng-options="item.name for item in vendors" >
+        </select>
+      </label>
+      <label class="item item-input" id="editVendor-input30">
+        <span class="input-label">Name</span>
+        <input ng-model="input.name" type="text" placeholder="Name">
+      </label>
+      <label class="item item-input" id="editVendor-input31">
+        <span class="input-label">Balance</span>
+        <input ng-model="input.balance" type="number" placeholder="Balance">
+      </label>
+       <label class="item item-input" id="editVendor-input31">
+        <span class="input-label">TP</span>
+        <input ng-model="input.tp" type="number" placeholder="TP">
+      </label>
+    </form>
+    <a ng-click="save(input)" id="editVendor-button28" class="button button-stable button-block">Save</a>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,45 @@
+<ion-view title="Edit Billing" id="page13">
+  <ion-content padding="true" class="has-header" overflow-scroll="true">
+      <form id="editBilling" class="list">
+      <label class="item item-select" id="editBilling-select" name="type">
+        <span class="input-label">Type</span>
+        <select ng-model="type" ng-change="changedTypeValue(type)">
+          <option>Customer</option>
+          <option>Vendor</option>
+        </select>
+      </label>
+      <label class="item item-select" id="editBilling-select" name="id">
+        <span class="input-label">Name (ID)</span>
+        <select  ng-model="naid" ng-change="changedNameIdValue(naid)" ng-options="item.name for item in nameid" >
+
+         <!--  <option data-ng-repeat="nd in nameid" >
+            {{nd.id}}. {{nd.name}}
+          </option> -->
+        </select>
+      </label>
+      <label class="item item-input" id="editBilling-input9" name="ratechart">
+        <span class="input-label">Rate Chart</span>
+        <input type="text" placeholder="">
+      </label>
+      <button id="editBilling-button" ng-click="addNewField()" class="button button-positive button-block icon-left ion-android-add-circle">Add Prefix and Rate</button>
+      <div class="spacer" style="width: 300px; height: 15px;"></div>
+
+      <fieldset  data-ng-repeat="field in fields">
+          <label class="item item-input" id="editBilling-prefix" name="prefix">
+            <span class="input-label">{{$index+1}}. Prefix</span>
+            <input ng-model="field.prefix" type="text" placeholder="">
+          </label>
+          <label class="item item-input" id="editBilling-rate" name="rate">
+            <span class="input-label">{{$index+1}}. Rate</span>
+            <input ng-model="field.rate" type="text" placeholder="">
+          
+
+          </label>
+           <button class="button button-positive button-block icon-left ion-android-remove-circle"
+            ng-show="$last" ng-click="removeField()">Remove Field</button>
+      </fieldset>
+
+    </form>
+    <a ui-sref="menu.home()" id="editBilling-button26" class="button button-stable button-block">Save</a>
+  </ion-content>
+</ion-view>

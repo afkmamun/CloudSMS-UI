@@ -1,0 +1,16 @@
+<ion-view title="Prefix: {{title}}" id="page20">
+  <ion-content padding="true" class="has-header">
+    <form  class="list">
+
+    <ion-toggle  ng-model="allowables[$index].toggle" 
+    ng-repeat="vendor in vendors" 
+   ng-show="checkPrefix(vendor)"
+    ng-click="toggleFilter(vendor)"
+    toggle-class="toggle-positive"  >
+     Vendor ID: {{vendor.id}}
+     </ion-toggle>
+      
+    </form>
+    <a ng-click="done()" id="addCustomer-button13" class="button button-stable button-block">Done</a>
+  </ion-content>
+</ion-view>

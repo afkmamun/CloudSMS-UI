@@ -1,0 +1,40 @@
+<ion-view title="Edit Customer" id="page9">
+  <ion-content padding="true" class="has-header">
+    <form id="editCustomer-form2" class="list">
+     <label class="item item-select" id="editCustomer-select8" name="id">
+        <span class="input-label">Customer Name</span>
+        <select  ng-model="item" ng-change="changedNameIdValue(item)" ng-options="item.name for item in customers" >
+
+         <!--  <option data-ng-repeat="nd in nameid" >
+            {{nd.id}}. {{nd.name}}
+          </option> -->
+        </select>
+      </label>
+      <label class="item item-input item-floating-label" id="editCustomer-input4" name="name">
+        <span class="input-label">Name</span>
+        <input  ng-model="input.name" type="text" placeholder="Name">
+      </label>
+      <label class="item item-input item-floating-label" id="editCustomer-input3" name="username">
+        <span class="input-label">Username</span>
+        <input ng-model="input.username" type="text" placeholder="Username">
+      </label>
+      <label class="item item-input item-floating-label" id="editCustomer-input5" name="password">
+        <span class="input-label">Password</span>
+        <input ng-model="input.password" type="text" placeholder="Password">
+      </label>
+      <label class="item item-input item-floating-label" id="editCustomer-input7" name="phone">
+        <span class="input-label">Phone</span>
+        <input ng-model="input.phone" type="text" placeholder="Phone Number">
+      </label>
+      <!-- <label class="item item-input item-floating-label" id="editCustomer-input6" name="address">
+        <span class="input-label">Address</span>
+        <input ng-model="input.address" type="text" placeholder="Address">
+      </label> -->
+      <label class="item item-input item-floating-label" id="editCustomer-input8" name="email">
+        <span class="input-label">Email</span>
+        <input ng-model="input.email" type="email" placeholder="Email">
+      </label>
+    </form>
+    <a ng-click="save(input)" id="editCustomer-button14" class="button button-stable button-block">Save</a>
+  </ion-content>
+</ion-view>
